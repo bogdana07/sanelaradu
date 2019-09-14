@@ -1,7 +1,28 @@
+/* temp outline class, delete when done
+header,
+div,
+section,
+nav,
+footer */
+
+/* header css */
+/* content */
+/* footer */
+
 a {
-	color: rebeccapurple;
+	color: white;
 	text-decoration: none;
+	margin-left: 24px;
 }
+.footer {
+	background-color: tomato;
+	border: 1px solid red;
+	color: white;
+	display: flex;
+	justify-content: center;
+	padding: 12px;
+}
+
 ul {
 	margin: 0;
 }
@@ -26,10 +47,32 @@ ul {
 }
 
 .header {
+	background-color: tomato;
+	border-bottom: 5px black solid;
+	color: white;
 	display: flex;
 	justify-content: space-between;
+	padding: 24px;
 }
 .nav {
 	display: flex;
 	list-style: none;
+}
+
+.portfolio-image {
+	height: 200px;
+	width: 150px;
+	float: left;
+	padding-right: 24px;
+}
+.sanela-border {
+	border-bottom: 2px gray solid;
+}
+.section-content {
+	/* max-width: 800px; */
+}
+.section-main {
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
 }
