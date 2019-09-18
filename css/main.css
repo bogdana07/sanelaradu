@@ -14,6 +14,18 @@ a {
 	text-decoration: none;
 	margin-left: 24px;
 }
+.body {
+	font-family: Inconsolata, Arial, Helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+.header-logo {
+	font-size: 16px;
+}
+.bird {
+	height: 18px;
+}
 .footer {
 	background-color: tomato;
 	border: 1px solid red;
@@ -45,6 +57,15 @@ ul {
 .ml {
 	margin-left: 24px;
 }
+.button {
+	background-color: lawngreen;
+	border-radius: 6px;
+	color: gray;
+	padding: 6px 12px;
+}
+.button:hover {
+	background-color: darkblue;
+}
 
 .header {
 	background-color: tomato;
@@ -58,7 +79,14 @@ ul {
 	display: flex;
 	list-style: none;
 }
-
+.portfolio-grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+.portfolio-grid img {
+	margin: 12px;
+	border: 1px black solid;
+}
 .portfolio-image {
 	height: 200px;
 	width: 150px;
@@ -70,9 +98,24 @@ ul {
 }
 .section-content {
 	/* max-width: 800px; */
+	/* height: 200px;
+	overflow: auto; */
 }
 .section-main {
 	display: flex;
 	flex-grow: 1;
 	justify-content: center;
+}
+
+/** responsive styles screen size 1024px */
+@media (min-width: 1024px) and (max-width: 1399px) {
+	.header-logo {
+		font-size: 48px;
+	}
+}
+
+@media (min-width: 1400px) {
+	.header-logo {
+		font-size: 96px;
+	}
 }
