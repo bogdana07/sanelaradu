@@ -15,10 +15,11 @@ a {
 	margin-left: 24px;
 }
 .body {
-	font-family: Inconsolata, Arial, Helvetica, sans-serif;
+	font-family: Dancing Script, Arial, Helvetica, sans-serif;
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
+	background-color: ghostwhite;
 }
 .header-logo {
 	font-size: 16px;
@@ -32,7 +33,7 @@ a {
 	color: white;
 	display: flex;
 	justify-content: center;
-	padding: 12px;
+	padding: 6px;
 }
 
 ul {
@@ -58,13 +59,15 @@ ul {
 	margin-left: 24px;
 }
 .button {
-	background-color: lawngreen;
+	background-color: black;
 	border-radius: 6px;
-	color: gray;
+	color: white;
 	padding: 6px 12px;
 }
 .button:hover {
-	background-color: darkblue;
+	/* background-color: rgb(138, 138, 180); */
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 .header {
@@ -73,7 +76,7 @@ ul {
 	color: white;
 	display: flex;
 	justify-content: space-between;
-	padding: 24px;
+	padding: 12px;
 }
 .nav {
 	display: flex;
