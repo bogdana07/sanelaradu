@@ -36,28 +36,6 @@ a {
 	padding: 6px;
 }
 
-ul {
-	margin: 0;
-}
-.bdc-blue {
-	border-color: blue;
-}
-.bds-s {
-	border-style: solid;
-}
-.bdw-1 {
-	border-width: 1px;
-}
-
-.m {
-	margin: 24px;
-}
-.p {
-	padding: 24px;
-}
-.ml {
-	margin-left: 24px;
-}
 .button {
 	background-color: black;
 	border-radius: 6px;
@@ -78,6 +56,9 @@ ul {
 	justify-content: space-between;
 	padding: 12px;
 }
+.main-text {
+	font-family: serif;
+}
 .nav {
 	display: flex;
 	list-style: none;
@@ -91,8 +72,8 @@ ul {
 	border: 1px black solid;
 }
 .portfolio-image {
-	height: 200px;
-	width: 150px;
+	height: 400px;
+	width: 250px;
 	float: left;
 	padding-right: 24px;
 }
@@ -103,6 +84,8 @@ ul {
 	/* max-width: 800px; */
 	/* height: 200px;
 	overflow: auto; */
+	padding-left: 200px;
+	padding-right: 200px;
 }
 .section-main {
 	display: flex;
