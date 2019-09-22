@@ -48,7 +48,14 @@ a {
 	font-weight: bold;
 	text-decoration: underline;
 }
-
+.contact-items {
+	display: flex;
+	justify-content: space-evenly;
+	list-style: none;
+}
+.contact-list {
+	margin: 24px;
+}
 .header {
 	background-color: tomato;
 	border-bottom: 5px black solid;
@@ -78,10 +85,17 @@ a {
 	float: left;
 	padding-right: 24px;
 }
+
+.contact-items {
+	font-family: serif;
+	font-size: 24px;
+	color: darkslategrey;
+}
 .resume-link {
-	font-family: Dancing Script, serif;
-	font-size: 40px;
-	color: tomato;
+	font-family: serif;
+	font-size: 24px;
+	color: darkslategrey;
+	margin-left: 0px;
 }
 .sanela-border {
 	border-bottom: 2px gray solid;
