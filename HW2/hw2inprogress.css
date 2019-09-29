@@ -1,10 +1,24 @@
+.body {
+    background-color: cornsilk;
+}
+
 .homepage-logo {
     font-family: "Black Vosten Personal Use", "serif";
     font-size: 4.5rem;
 }
 
+.navbar .nav-item .navbar-brand {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 50px;
+    font-weight: lighter;
+}
+
 .portfolio-image {
+    border: 2px darkslategray solid;
     border-radius: 50%;
-    height: 300px;
-    width: 300px;
+    height: 275px;
+    margin-bottom: 25px;
+    margin-top: 50px;
+    width: 275px;
 }
