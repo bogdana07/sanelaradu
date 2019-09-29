@@ -1,3 +1,8 @@
+.homepage-logo {
+    font-family: "Black Vosten Personal Use", "serif";
+    font-size: 4.5rem;
+}
+
 .portfolio-image {
     border-radius: 50%;
     height: 300px;
