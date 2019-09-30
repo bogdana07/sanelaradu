@@ -1,10 +1,25 @@
-.body {
-    background-color: cornsilk;
+.footer {
+    font-weight: 300;
+    padding: 0 auto;
+    text-align: center;
+}
+
+.gradient {
+    background: radial-gradient(
+    circle farthest-corner at center center,
+    #9796f0,
+    #fbc7d4
+  );
 }
 
 .homepage-logo {
     font-family: "Black Vosten Personal Use", "serif";
     font-size: 4.5rem;
+}
+
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .navbar .nav-item .navbar-brand {
@@ -14,8 +29,12 @@
     font-weight: lighter;
 }
 
+.nav-item {
+
+}
+
 .portfolio-image {
-    border: 2px darkslategray solid;
+    border: 5px darkslategray double;
     border-radius: 50%;
     height: 275px;
     margin-bottom: 25px;

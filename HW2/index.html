@@ -6,108 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../HW2/CSS/normalize.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" />
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" />
-    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/jquery-3.1.1.slim.min.js" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" />
-    <link rel="stylesheet" type="text/css"
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" />
-    <link rel="stylesheet" type="text/css" href="../HW2/CSS/main.css" />
-    <title>Sanela Radu Responsive Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../HW2/main.css" />
+    <link href="C:\Windows\Fonts\Black Vosten Personal Use.ttf" rel="stylesheet" />
+    <title>About Me</title>
 </head>
 
 <body>
 
-    <!--header-->
-    <!--header logo-->
-
-    <!--navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-        <!--  Show this only on mobile to medium screens  -->
-        <a class="navbar-brand d-lg-none" href="#">
-            <h1>Sanela Radu</h1><small class="text-muted">Full Stack Web Developer</small>
-        </a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
-            aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!--  Use flexbox utility classes to change how the child elements are justified  -->
-        <div class="collapse navbar-collapse justify-content-between" id="navbarToggle">
-
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#"></a>
-                    <h2>Sanela Radu </h2><small class="text-muted">Full Stack Web Developer</small></a>
-                </li>
+    <div class="container-wrapper gradient">
+        <!--navbar-->
+        <nav class="navbar d-flex justify-content-center navbar-dark bg-dark">
+            <ul class="nav p-2">
+                <li class="nav-item"><a class="navbar-brand" href="./homepage.html">Home</a></li>
+                <li class="nav-item"><a class="navbar-brand active" href="#">About Me</a></li>
+                <li class="nav-item"><a class="navbar-brand" href="./portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="navbar-brand" href="../Sanela Radu - Resume - 2019.pdf"
+                        target="_blank">Resume</a></li>
+                <li class="nav-item"><a class="navbar-brand" href="./contact.html">Contact</a></li>
             </ul>
+        </nav>
 
+        <!--section-->
+        <div class="container">
 
-            <!--   Show this only lg screens and up   -->
-            <a class="navbar-brand d-none d-lg-block" href="#"></a>
+            <!--Left side of main content: image-->
+            <div class="row">
 
+                <div class="col-md-6">
+                    <img src="../img/IMG_2817-square.jpg" alt="" class="w-100 img-fluid main-image" />
+                </div>
 
-
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
-    <!--section-->
-    <div class="container">
-        <!--  image left  -->
-        <div class="row">
-            <div class="col-md-6">
-                <img src="../img/IMG_2817.jpg" alt="" class="w-100 img-fluid" />
-            </div>
-
-            <!-- /.col-md-6 -->
-            <div class="col-md-6">
-                <div class="row align-items-center h-100">
-                    <div class="col">
-                        <h1 class="display-3">About Me</h1>
-                        <p class="lead">Spicy jalapeno bacon ipsum dolor amet chicken leberkas pork belly
-                            swine. Prosciutto bacon biltong meatball kielbasa pancetta chuck
-                            shoulder ball tip tail buffalo frankfurter alcatra jerky capicola.
-                            Shoulder kielbasa rump alcatra tenderloin pig. Landjaeger cow
-                            shoulder, capicola sausage shank drumstick venison rump salami.
-                            Fatback ham meatball ball tip capicola turkey short loin. Pastrami
-                            porchetta chicken landjaeger doner short loin biltong, bacon rump.
-                            Sirloin buffalo short loin bresaola turkey.
-                            <br /><br />
-                            <a href="" class="">Learn More</a>
-                        </p>
-
+                <!--Right side of main content: text-->
+                <div class="col-md-6">
+                    <div class="row align-items-center h-100">
+                        <div class="col">
+                            <h1 class="display-3">About Me</h1>
+                            <p class="lead">Spicy jalapeno bacon ipsum dolor amet chicken leberkas pork belly
+                                swine. Prosciutto bacon biltong meatball kielbasa pancetta chuck
+                                shoulder ball tip tail buffalo frankfurter alcatra jerky capicola.
+                                Shoulder kielbasa rump alcatra tenderloin pig. Landjaeger cow
+                                shoulder, capicola sausage shank drumstick venison rump salami.
+                                Fatback ham meatball ball tip capicola turkey short loin. Pastrami
+                                porchetta chicken landjaeger doner short loin biltong, bacon rump.
+                                Sirloin buffalo short loin bresaola turkey.
+                            </p>
+                        </div>
                     </div>
                 </div>
+
             </div>
-            <!-- /.col-md-6 -->
+
         </div>
-        <!-- /.row -->
     </div>
-
-
     <!--footer-->
+    <footer class="footer bg-dark text-light">
+        <div class="container-fluid text-center">
 
+            <div class="row">
+                <div class="col-md-12">
+                    Made with <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
+                </div>
+            </div>
 
-    </div>
+            <div class="row">
+                <div class="col-md-12 copyrights">
+                    Copyright 2019
+                </div>
+            </div>
+
+        </div>
+    </footer>
 </body>
 
 </html>
