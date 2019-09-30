@@ -1,7 +1,35 @@
+.contact-wrapper {
+    color: black;
+    font-family: Playfair Display, serif;
+    font-size: 28px;
+    letter-spacing: 0.05em;
+    margin-top: 100px;
+}
+
+.contact-wrapper a {
+    color: black;
+}
+.contact-wrapper a:hover {
+    text-decoration: none;
+    text-shadow: 2px 2px 10px #FF0000;
+}
+
+.container-gallery {
+    margin: 25px auto;
+}
+
+.logo-wrapper {
+    margin-top: 25px;
+}
+
 .footer {
     font-weight: 300;
     padding: 0 auto;
     text-align: center;
+}
+
+.gallery-row {
+    margin-bottom: 50px;
 }
 
 .gradient {
@@ -10,6 +38,7 @@
     #9796f0,
     #fbc7d4
   );
+background-size: cover;
 }
 
 .homepage-logo {
@@ -29,8 +58,8 @@
     font-weight: lighter;
 }
 
-.nav-item {
-
+.navbar a:hover {
+    text-shadow: 5px 5px 10px #FF0000;
 }
 
 .portfolio-image {
