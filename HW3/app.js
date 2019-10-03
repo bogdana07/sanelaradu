@@ -28,6 +28,12 @@ function shuffle(array) {
 
 //define function
 function createPassword() {
+    var pw = [];
+    if (pwLen > 128) {
+        pwLen = prompt('Your password is greater than maximum 128 characters. Choose another password length');
+        createPassword();
+    };
+
     for (i = 0; i < pwLen; i++) {
 
         // if/else symbols
