@@ -1,13 +1,10 @@
 var pw = [];
-var pwLen = prompt('How long is your password?');
-var letters = ['a', 'b', 'c', 'd', 'e', 'f'];
-var numbers = ['1', '2', '3', '4', '5'];
-var symbols = ['!', '@', '#', '$'];
-// var pwLen = prompt('what is your pw length? Must be between 8 and 128 characters.');
+var pwLen = prompt('What is your password length? Must be 8-128 characters.');
+var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+'];
 var isSymbols = true;
 var isNumbers = true;
-var genBtn = document.getElementById('genPass');
-
 
 // randomize an array
 function shuffle(array) {
@@ -29,26 +26,24 @@ function shuffle(array) {
     return array;
 };
 
-//define function
+// defined function to generate password
 function createPassword() {
-    var pw = [];
-
+    //conditional statement: pwLen maximum 128 characters
     if (pwLen > 128) {
-        pwLen = prompt('Your password is greater than maximum 128 characters. Choose another password length');
+        pwLen = prompt('Invalid: Exceeds maximum 128 characters. Choose password length 8-128 characters');
         createPassword();
-    };
+    }
+    //conditional statement: pwLen minimum 8 characters
+    else if (pwLen < 8) {
+        pwLen = prompt('Invalid: Must be at least 8 characters. Choose password length 8-128 characters');
+        createPassword();
+    }
 
     for (i = 0; i < pwLen; i++) {
-
-        // if/else symbols
+        //if symbols
         if (isSymbols == true && i == 0) {
             var randomSymNo = Math.floor(Math.random() * symbols.length);
-
-            // inject a symbol in the string
-            // option 1
-            // pw = pw + symbols[randomSymNo];
-
-            // option 2
+            //inject symbol in string
             pw.push(symbols[randomSymNo]);
         }
 
@@ -58,23 +53,16 @@ function createPassword() {
             pw.push(numbers[randomNum]);
         }
 
-        // else letters
+        //else letters
         else {
+            //inject a letter into string
             var randomNo = Math.floor(Math.random() * letters.length);
-            // option 1
             pw.push(letters[randomNo]);
-
-            // option 2
-            // pw = pw + letters[randomNo];
         }
-
-        pwShuffle = shuffle(pw);
-        pwBox.innerHTML = pwShuffle.toString();
     }
+
+    pwShuffle = shuffle(pw);
+    pwBox.innerHTML = pwShuffle.toString();
 };
 
-//first event
-genBtn.addEventListener('click', showAlert);
-//change this password into a dynamic random pw
-//document.write(pw);
-
+// first event
