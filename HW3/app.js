@@ -1,11 +1,11 @@
 var pw = [];
-var pwLen = prompt('What is your password length? Must be 8-128 characters.');
+
 var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+'];
-var isSymbols = confirm('Do you want to include symbols?');
-var isNumbers = confirm('Do you want to include numbers?');
-var uppercase = confirm('Do you want to include uppercase letters?');
+var symbolsChecked = document.getElementById('isSymbols');
+var numbersChecked = document.getElementById('isNumbers');
+var uppercaseChecked = document.getElementById('isUppercase');
 
 // defined function to randomize the array
 function shuffle(array) {
@@ -30,6 +30,8 @@ function shuffle(array) {
 // defined function to generate password
 function createPassword() {
 
+    var pwLen = prompt('What is your password length? Must be 8-128 characters.');
+
     //conditional: length > maximum 128 characters
     if (pwLen > 128) {
         pwLen = prompt('Invalid: Exceeds maximum 128 characters. Choose password length 8-128 characters');
@@ -44,20 +46,20 @@ function createPassword() {
     for (i = 0; i < pwLen; i++) {
 
         //if symbols
-        if (isSymbols == true && i == 0) {
+        if (symbolsChecked.checked == true && i == 0) {
             var randomSymNo = Math.floor(Math.random() * symbols.length);
             //inject symbol in string
             pw.push(symbols[randomSymNo]);
         }
 
         // if numbers 
-        if (isNumbers == true && i == 0) {
+        if (numbersChecked.checked == true && i == 0) {
             var randomNum = Math.floor(Math.random() * numbers.length);
             pw.push(numbers[randomNum]);
         }
 
         //if uppercase letters
-        if (uppercase == true && i == 0) {
+        if (uppercaseChecked.checked == true && i == 0) {
             var randomNo = Math.floor(Math.random() * letters.length);
             pw.push(letters[randomNo].toUpperCase());
         }
@@ -77,3 +79,11 @@ function createPassword() {
     pwBox.innerHTML = pw.join('');
 };
 
+//defined function to copy password to clipboard
+var copyText = document.getElementById('pwBox');
+
+function copyPassword() {
+    var copyText = document.getElementById('pwBox');
+    copyText.select();
+    document.execCommand('copy');
+};
