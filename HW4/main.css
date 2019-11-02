@@ -1,0 +1,100 @@
+body {
+    background-color: gainsboro;
+    color: ;
+    font-size: 24px;
+    padding: 24px;
+}
+button {
+    background-color: rgb(90, 12, 12);
+    border: 1px solid darkgray;
+    color: gainsboro;
+    font-size: 24px;
+    padding: 12px;
+    margin-top: 6px;
+}
+
+.button{
+    background-color: rgb(90, 12, 12);
+    border: 1px solid darkgray;
+    color: gainsboro;
+    font-size: 24px;
+    padding: 12px;
+    margin-top: 6px;
+}
+
+.finalScore {
+    font-size: 36px;
+}
+
+.timer {
+    font-size: 28px;
+}
+
+.hide {
+    display: none;
+}
+
+.instructions { 
+    padding: 24px;
+    text-align: center;
+    width: 75%;
+}
+
+.scoresList {
+    margin-left: 70%;
+    margin-top: -5%;
+}
+
+.b {
+    border: 2px solid rgb(90, 12, 12);
+}
+
+.mb {
+    margin-bottom: 24px;
+}
+
+.mt {
+    margin-top: 24px;
+}
+
+.mtq {
+    margin-top: 3%;
+    padding-bottom: 12px;
+}
+
+.d-f {
+    display: flex;
+}
+.d-n {
+    display: none;
+}
+
+.f-d {
+    flex-direction: column;
+    width: 40%;
+}
+
+.fs-q {
+    font-size: 30px;
+}
+
+.jc-sa {
+    justify-content: space-around;
+}
+
+.jc-c {
+    justify-content: center;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.q-w {
+    width: 90%;
+    padding: 24px;
+}
+
+.ta-c {
+    text-align: center;
+}

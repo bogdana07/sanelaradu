@@ -5,50 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="normalize.css" />
+    <title>Coding Quiz</title>
+    <!-- style sheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./main.css" />
-    <title>Code Quiz</title>
 </head>
 
 <body>
-
-    <div class="container">
-        <div class="highscores"></div>
-        <div class="timer">
-            <h1 class="time"></h1>
+    <div class="d-f jc-sb">
+        <!-- view high scores -->
+        <button id="viewScores">View High Scores</button>
+        <!-- show timer -->
+        <div id="time" class="timer">
+            Time Remaining: 75 Sec
         </div>
     </div>
 
 
-    <div id="main">
+    <!-- start game -->
+    <div class="mt landing-page" id="main">
         <div class="content">
-            <h1 id="mainText">Coding Quiz Challenge</h1>
-            <p id="instructions">Select the best answer out of four multiple choice options for each question. For every
-                question you get correct, your score increases by 1. For every incorrect answer, your score decreases by
-                one. Complete all the questions in ----SOME TIME.</p>
-        </div>
-
-        <div class="startQuiz">
-            <button onclick="startQuiz()">Start Quiz</button>
-        </div>
-
-        <!-- counter -->
-        <div>
-            <h4>Current count: <span id="count">0</span></h4>
-            <div class="container">
-                <button id="decrement">Decrement</button>
-                <button id="increment">Increment</button>
+            <h1 id="mainText" class="d-f jc-c">Coding Quiz Challenge</h1>
+            <div class="d-f jc-c mt">
+                <p id="instructions" class="instructions b">You have 75 seconds to select the best answer for each of
+                    five questions. Earn 1 point for every correct answer. The timer begins once you click start. It
+                    will stop once you've answered the last
+                    question or when time runs out. After completing the quiz, submit your initials, and click on 'View
+                    Highscores' to see a log of past attempts.
+                    Not happy with your final score? Click 'Restart Quiz' to try again! Good Luck!</p>
             </div>
-
+            <div class="d-f jc-c"><button id="startQuiz" class="mt">Start</button></div>
         </div>
-        <!-- end counter -->
+    </div>
+
+
+    <!-- show question -->
+    <div class="container">
+        <div class="row d-flex justify-content-between">
+            <div class="col-md-2">
+            </div>
+            <div id="questions" class="col-md-8 d-f fs-q jc-c mtq ta-c">
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12  d-f jc-c">
+                <!-- show choices -->
+                <div id="choices" class="mt d-f f-d"></div>
+            </div>
+        </div>
     </div>
 
 
 
 
+    <div id="finalPanel" class="d-n">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+
+                <div class="col-md-4 d-block">
+                    <!-- enter user initials -->
+                    <div class="row mt finalScore">
+                        <label>Enter your initials:</label>
+                        <input id="initials" type="text" max="3">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-between">
+                            <!-- submit score and initials -->
+                            <button id="submitScore" class="mt">Submit Score</button>
+                            <button id="submitScore" class="mt" onClick="location.href='./index.html'">Restart
+                                Quiz</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 mt">
+                    <!-- show score -->
+                    <div id="endGame" class="mt float-right">
+                        <span class="finalScore">Your final score is: <span id="finalScore"></span></span>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- show high scores -->
+    <div class="d-n scoresList" id="scoresPanel">
+        <h2>High Scores:</h2>
+    </div>
+
+    <!-- js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./app.js"></script>
-    <script src="questions.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
