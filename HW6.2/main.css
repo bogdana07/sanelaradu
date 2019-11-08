@@ -1,3 +1,16 @@
+.img {
+    position: relative;
+}
+
+.captionOne {
+    background-color: black;
+    color: white;
+    width: 210px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+}
+
 .contact-wrapper {
     color: black;
     font-family: Playfair Display, serif;
