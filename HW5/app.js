@@ -1,6 +1,8 @@
 $(document).ready(function () {
     var dailyTasks = JSON.parse(localStorage.getItem('myDay')) || {};
 
+
+
     $('.js-save').on('click', function () {
         /* get the key and the value */
         var key = $(this).data('key');
@@ -9,6 +11,10 @@ $(document).ready(function () {
         // save it local storage
         dailyTasks[key] = value;
         localStorage.setItem('myDay', JSON.stringify(dailyTasks));
+        $(`#${key}`).val('');
+
+        $('#result').text(value);
+
     });
 
     /* init */
@@ -21,9 +27,9 @@ $(document).ready(function () {
 
 
 var currentHour = moment().hours();  /*** 9 */
-loop through your hours
-var blockHour = something;
-if (blockhour < currentHour)
-    style it
-if (blockhour === currentHour)
-    style it
+// loop through your hours
+// var blockHour = something;
+// if (blockhour < currentHour)
+//     style it
+// if (blockhour === currentHour)
+//     style it
