@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+    $('#date').text(moment().format('dddd, MMMM Do YYYY'));
+
     var dailyTasks = JSON.parse(localStorage.getItem('myDay')) || {};
 
 
@@ -11,9 +14,7 @@ $(document).ready(function () {
         // save it local storage
         dailyTasks[key] = value;
         localStorage.setItem('myDay', JSON.stringify(dailyTasks));
-        $(`#${key}`).val('');
-
-        $('#result').text(value);
+        $(`#${key}`).css('text-align', 'center');
 
     });
 
@@ -26,7 +27,18 @@ $(document).ready(function () {
 });
 
 
-var currentHour = moment().hours();  /*** 9 */
+var currentHour = moment().hours();
+console.log(currentHour);
+
+var hourNine = $('#hour-9').val('9');
+
+
+if (hourNine < currentHour) {
+    $('.activity').css('background-color', 'grey');
+}
+
+//if blockHour
+
 // loop through your hours
 // var blockHour = something;
 // if (blockhour < currentHour)
