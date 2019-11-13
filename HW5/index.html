@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Daily Planner</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./main.css" />
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
@@ -22,97 +22,66 @@
     <div class='container pt-3'>
 
         <div class="row d-flex justify-content-between mb-3">
-            <div class="col-md-1 border-right">9 am</div>
-            <div class="col-md-10 border-right"><input id="hour-9" class="activity"></input></div>
-            <div class="col-md-1"><button class="js-save" data-key="hour-9">save</button></div>
+            <div class="col-md-1 d-flex align-self-center">9 am</div>
+            <div class="col-md-10 border-left border-right"><textarea id="blockHour" class="activity"
+                    data-hour="9"></textarea></div>
+            <div class="col-md-1 d-flex"><button class="js-save" data-key="hour-9">save</button></div>
         </div>
 
         <div class="row d-flex justify-content-between mb-3">
-            <div class="col-md-1 border-right">10 am</div>
-            <div class="col-md-10 border-right"><input id="hour-10" class="activity"></input></div>
-            <div class="col-md-1"><button class="js-save" data-key="hour-10">save</button></div>
+            <div class="col-md-1 d-flex align-self-center">10 am</div>
+            <div class="col-md-10 border-left border-right"><textarea id="hour-10" class="activity"
+                    data-hour="10"></textarea></div>
+            <div class="col-md-1 d-flex"><button class="js-save" data-key="hour-10">save</button></div>
         </div>
 
         <div class="row d-flex justify-content-between mb-3">
-            <div class="col-md-1 border-right">11 am</div>
-            <div class="col-md-10 border-right"><input id="hour-11" class="activity"></input></div>
-            <div class="col-md-1"><button class="js-save" data-key="hour-11">save</button></div>
+            <div class="col-md-1 d-flex align-self-center">11 am</div>
+            <div class="col-md-10 border-left border-right"><textarea id="hour-11" class="activity"
+                    data-hour="11"></textarea></div>
+            <div class="col-md-1 d-flex"><button class="js-save" data-key="hour-11">save</button></div>
         </div>
 
         <div class="row d-flex justify-content-between mb-3">
-            <div class="col-md-1 border-right">12 pm</div>
-            <div class="col-md-10 border-right"><input id="hour-12" class="activity"></input></div>
-            <div class="col-md-1"><button class="js-save" data-key="hour-12">save</button></div>
+            <div class="col-md-1 d-flex align-self-center">12 pm</div>
+            <div class="col-md-10 border-left border-right"><textarea id="hour-12" class="activity"
+                    data-hour="12"></textarea></div>
+            <div class="col-md-1 d-flex"><button class="js-save" data-key="hour-12">save</button></div>
         </div>
 
         <div class="row d-flex justify-content-between mb-3">
-            <div class="col-md-1 border-right">1 pm</div>
-            <div class="col-md-10 border-right"><input id="hour-13" class="activity"></input></div>
-            <div class="col-md-1"><button class="js-save" data-key="hour-13">save</button></div>
+            <div class="col-md-1 d-flex align-self-center">1 pm</div>
+            <div class="col-md-10 border-left border-right"><textarea id="hour-13" class="activity"
+                    data-hour="13"></textarea></div>
+            <div class="col-md-1 d-flex"><button class="js-save" data-key="hour-13">save</button></div>
         </div>
 
         <div class="row d-flex justify-content-between mb-3">
-            <div class="col-md-1 border-right">2 pm</div>
-            <div class="col-md-10 border-right"><input id="hour-14" class="activity"></input></div>
-            <div class="col-md-1"><button class="js-save" data-key="hour-14">save</button></div>
+            <div class="col-md-1 d-flex align-self-center">2 pm</div>
+            <div class="col-md-10 border-left border-right"><textarea id="hour-14" class="activity"
+                    data-hour="14"></textarea></div>
+            <div class="col-md-1 d-flex"><button class="js-save" data-key="hour-14">save</button></div>
         </div>
 
         <div class="row d-flex justify-content-between mb-3">
-            <div class="col-md-1 border-right">3 pm</div>
-            <div class="col-md-10 border-right"><input id="hour-15" class="activity"></input></div>
-            <div class="col-md-1"><button class="js-save" data-key="hour-15">save</button></div>
+            <div class="col-md-1 d-flex align-self-center">3 pm</div>
+            <div class="col-md-10 border-left border-right"><textarea id="hour-15" class="activity"
+                    data-hour="15"></textarea></div>
+            <div class="col-md-1 d-flex"><button class="js-save" data-key="hour-15">save</button></div>
         </div>
 
         <div class="row d-flex justify-content-between mb-3">
-            <div class="col-md-1 border-right">4 pm</div>
-            <div class="col-md-10 border-right"><input id="hour-16" class="activity"></input></div>
-            <div class="col-md-1"><button class="js-save" data-key="hour-16">save</button></div>
+            <div class="col-md-1 d-flex align-self-center">4 pm</div>
+            <div class="col-md-10 border-left border-right"><textarea id="hour-16" class="activity"
+                    data-hour="16"></textarea></div>
+            <div class="col-md-1 d-flex"><button class="js-save" data-key="hour-16">save</button></div>
         </div>
 
         <div class="row d-flex justify-content-between mb-3">
-            <div class="col-md-1 border-right">5 pm</div>
-            <div class="col-md-10 border-right"><input id="hour-17" class="activity"></input></div>
-            <div class="col-md-1"><button class="js-save" data-key="hour-17">save</button></div>
-        </div>
-
-
-
-
-
-        <div>
-            <div>11 am</div>
-            <textarea id="hour-11"></textarea>
-            <button class="js-save" data-key="hour-11">save</button>
-        </div>
-        <div>
-            <div>12 pm</div>
-            <textarea id="hour-12"></textarea>
-            <button class="js-save" data-key="hour-12">save</button>
-        </div>
-        <div>
-            <div>1 pm</div>
-            <textarea id="hour-13"></textarea>
-            <button class="js-save" data-key="hour-13">save</button>
-        </div>
-        <div>
-            <div>2 pm</div>
-            <textarea id="hour-14"></textarea>
-            <button class="js-save" data-key="hour-14">save</button>
-        </div>
-        <div>
-            <div>3 pm</div>
-            <textarea id="hour-15"></textarea>
-            <button class="js-save" data-key="hour-15">save</button>
-        </div>
-        <div>
-            <div>4 pm</div>
-            <textarea id="hour-16"></textarea>
-            <button class="js-save" data-key="hour-16">save</button>
-        </div>
-        <div>
-            <div>5 pm</div>
-            <textarea id="hour-17"></textarea>
-            <button class="js-save" data-key="hour-17">save</button>
+            <div class="col-md-1 d-flex align-self-center">5 pm</div>
+            <div class="col-md-10 border-left border-right"><textarea id="hour-17" class="activity"
+                    data-hour="17"></textarea></div>
+            <div class="col-md-1 d-flex"><button class="js-save" data-key="hour-17">save</button></div>
         </div>
 
     </div>

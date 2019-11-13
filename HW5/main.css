@@ -1,7 +1,9 @@
 .activity {
     background-color: darkcyan;
     color: oldlace;
+    font-size: 22px;
     height: 100%;
+    text-align: left;
     width: 100%;
 }
 

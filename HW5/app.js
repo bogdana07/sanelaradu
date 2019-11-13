@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
+    //moment js current date in header
     $('#date').text(moment().format('dddd, MMMM Do YYYY'));
 
     var dailyTasks = JSON.parse(localStorage.getItem('myDay')) || {};
 
-
-
+    //click event
     $('.js-save').on('click', function () {
         /* get the key and the value */
         var key = $(this).data('key');
@@ -24,24 +24,25 @@ $(document).ready(function () {
     $('#hour-10').val(dailyTasks['hour-10']);
     $('#hour-11').val(dailyTasks['hour-11']);
 
+
+    // //current hour
+    // var currentHour = moment().hours();
+
+    // //block hour
+    // var blockHour = document.getElementById('blockHour');
+    // console.log(blockHour.dataset.hour);
+
+    // //loop through hours and style
+    // if (blockHour.dataset.hour < currentHour) {
+    //     $('.activity').css('background-color', 'grey');
+    // }
+
+    // else if (blockHour === currentHour) {
+    //     $('.activity').css('background-color', 'green');
+    // }
+
+
 });
 
 
-var currentHour = moment().hours();
-console.log(currentHour);
 
-var hourNine = $('#hour-9').val('9');
-
-
-if (hourNine < currentHour) {
-    $('.activity').css('background-color', 'grey');
-}
-
-//if blockHour
-
-// loop through your hours
-// var blockHour = something;
-// if (blockhour < currentHour)
-//     style it
-// if (blockhour === currentHour)
-//     style it
