@@ -40,7 +40,7 @@ inquirer
         const run = async () => {
           const html5ToPDF = new HTML5ToPDF({
             inputPath: path.join(__dirname, "index.html"),
-            outputPath: path.join(__dirname, "great.pdf"),
+            outputPath: path.join(__dirname, "index.pdf"),
             options: { printBackground: true }
           });
           await html5ToPDF.start();
