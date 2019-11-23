@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="//code.jquery.com/jquery.js"></script>
+    <title>Add a Reservation</title>
+</head>
+
+<body>
+    <h1>Do you want to play a game?</h1>
+
+    <div><input type="text" id="customerName" placeholder="Name"></div>
+    <div><input type="text" id="customerEmail" placeholder="Email"></div>
+    <div><input type="text" id="customerId" placeholder="Customer Id"></div>
+    <div><input type="text" id="phoneNumber" placeholder="Phone Number"></div>
+    <button style="margin-top:24px;" class="js-submit">Send Reservation</button>
+
+    <script>
+        // EVENTS
+        $('.js-submit').on('click', event => {
+            //get form data
+            const customerName = $('#customerName').val().trim();
+
+            //get form data-make it an object
+            const newReservation = {
+                customerName: $('#customerName').val().trim(),
+                customerEmail: $('#customerEmail').val().trim(),
+                customerId: $('#customerId').val().trim(),
+                phoneNumber: $('#phoneNumber').val().trim(),
+            }
+
+            //get data from form
+            $.post('/api/tables', newReservation, data => {
+
+                if (data) {
+                    alert('congrats you made the window table');
+                }
+                else {
+                    alert('please sit by the aquarium until your name is called');
+                }
+            });
+
+            //send data to our server
+        });
+    </script>
+
+</body>
+
+</html>
