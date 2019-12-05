@@ -1,10 +1,12 @@
+DROP DATABASE IF EXISTS employee_tracker_db;
+
 CREATE DATABASE employee_tracker_db;
 
 USE employee_tracker_db;
 
 CREATE TABLE department (
 id INT NOT NULL AUTO_INCREMENT,
-name VARCHAR(30) NOT NULL,
+dept_name VARCHAR(30) NOT NULL,
 PRIMARY KEY (id)
 );
 
@@ -28,3 +30,10 @@ FOREIGN KEY (role_id) REFERENCES role(id)
 );
 
 ALTER TABLE employee ADD FOREIGN KEY (manager_id) REFERENCES employee(id) ON DELETE SET NULL;
+
+SELECT * FROM department;
+SELECT * FROM role;
+
+SELECT dept_name, title, salary
+FROM department
+INNER JOIN role ON role.department_id = department.id;
