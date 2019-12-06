@@ -16,113 +16,102 @@ connection.connect(err => {
     if (err) throw err;
     console.log("connected as id " + connection.threadId);
     //call another function or end the connection
-    addEmployee();
+    start();
 });
+
+
+function start() {
+    inquirer
+        .prompt({
+            name: "action",
+            type: "list",
+            message: "What would you like to do?",
+            choices: [
+                "View All Employees",
+                "View Employees by Department",
+                "View Employees by Manager",
+                "Add an Employee",
+                "Delete an Employee",
+                "Update an Employee",
+                "exit"
+            ]
+        })
+        .then(function (answer) {
+            switch (answer.action) {
+                case "View All Employees":
+                    viewEmployees();
+                    break;
+                case "View Employees by Department":
+                    byDepartment();
+                    break;
+                case "View Employees by Manager":
+                    byManager();
+                    break;
+                case "Add an Employee":
+                    addEmployee();
+                    break;
+                case "Delete an Employee":
+                    deleteEmployee();
+                    break;
+                case "Update an Employee":
+                    updateEmployee();
+                    break;
+                case "exit":
+                    connection.end();
+                    break;
+            }
+        });
+}
 
 
 //Add an Employee
 function addEmployee() {
-    console.log("Adding a new employee...\n");
-    const query = connection.query(
-        "INSERT INTO employee SET ?",
-        {
-            first_name: " ",
-            last_name: " ",
-            role: " "
-            manager: " "
-        },
-        (err, res) => {
-            if (err) throw err;
-            console.log(res.affectedRows + " employee added!\n");
-            //CALL UPDATE EMPLOYEE AFFFFFFTERRRR THE INSERT COMPLETES!!!
-            updateEmployee();
-        }
-    );
-    console.log(query.sql);
-};
-
-//Update Employee
-function updateEmployee() {
-    console.log("Updating department where id =...");
-    var query = connection.query(
-        "UPDATE employee SET ? WHERE ?",
-        [
+    inquirer
+        .prompt([
             {
-                department: "updated department name"
+                name: 'firstname',
+                type: 'input',
+                message: 'Enter first name:'
             },
             {
-                id: "employee id"
+                name: 'lastname',
+                type: 'input',
+                message: 'Enter last name:'
             }
-        ],
-        function (err, res) {
-            if (err) throw err;
-            console.log(res.affectedRows + " employee updated!\n");
-            //Call deleteEmployee AFTER the UPDATE completes!
-            deleteEmployee();
-        }
-    );
+        ])
+        .then(answer => {
+            connection.query(
+                'INSERT INTO employee SET ?',
+                {
+                    first_name: answer.firstname,
+                    last_name: answer.lastname,
+                },
+                err => {
+                    if (err) throw err;
+                    console.log('employee added!');
+                }
+            );
+            start();
+})
+}
 
-    //logs the actual query being run
-    console.log(query.sql);
-};
-
-//Delete Employee
-function deleteEmployee() {
-    console.log("Deleting employee...");
-    var query = connection.query(
-        "DELETE FROM employee WHERE ?",
-        {
-            id: 1,
-            first_name: " ",
-            last_name: " "
-        },
-        function (err, res) {
-            if (err) throw err;
-            console.log(res.affectedRows + " employee deleted!\n");
-            //Call viewEmployees AFTER the DELETE completes!
-            viewEmployees();
-        }
-    );
-
-    //logs the actual query being run
-    console.log(query.sql);
-};
 
 //View all Employees
 function viewEmployees() {
-    console.log("Selecting all employees...");
-    var query = connection.query("SELECT * FROM employee", function (err, res) {
-        if (err) throw err;
-        //log all results of the SELECT statement
-        console.log(res);
-        connection.end();
-    });
-    //logs the actual query being run
-    console.log(query.sql);
-};
-
-//View Employees by Department 
-function byDepartment() {
-    //prints employees based on department
-    connection.query("SELECT id, first_name, last_name FROM employee WHERE department=?", (" "), function (err, res) {
-        if (err) throw err;
-        for (var i = 0; i < res.length; i++) {
-            console.log(res[i]).id + " | " + console.log(res[i]).first_name + " | " + console.log(res[i]).last_name + " | "
-        }
-        console.log("-----------------------------------");
-        connection.end();
-    });
-};
-
-//View Employees by Manager 
-function byManager() {
-    //prints employees based on Manager
-    connection.query("SELECT id, first_name, last_name FROM employee WHERE manager_id=?", (" "), function (err, res) {
-        if (err) throw err;
-        for (var i = 0; i < res.length; i++) {
-            console.log(res[i]).id + " | " + console.log(res[i]).first_name + " | " + console.log(res[i]).last_name + " | "
-        }
-        console.log("-----------------------------------");
-        connection.end();
-    });
-};
+    inquirer
+        .prompt({
+            name: "employee",
+            type: "input",
+            message: "What employee would you like to search for?"
+        })
+        .then(function (answer) {
+            var query = "SELECT * FROM employee";
+            connection.query(query, { employee: answer.employee }, function (err, res) {
+                if (err) throw err;
+                for (var i = 0; i < res.length; i++) {
+                    console.log("First Name: " + res[i].first_name + " || Last Name: " + res[i].last_name + " || Role: " + res[i].role);
+                }
+                start();
+            });
+        });
+}
